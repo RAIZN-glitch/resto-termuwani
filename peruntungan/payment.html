@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anti Suki - Pembayaran</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="page-payment">
+
+    <!-- BG SILHOUETTES — 3-layer depth parallax -->
+    <div class="bg-sils" aria-hidden="true">
+
+        <!-- Orbs warna -->
+        <div class="bg-blob" style="top:7%;right:5%;width:300px;height:300px;background:rgba(204,0,0,.09)"></div>
+        <div class="bg-blob" style="top:40%;left:4%;width:340px;height:340px;background:rgba(255,193,7,.09);animation-delay:3.5s"></div>
+        <div class="bg-blob" style="top:78%;left:42%;width:260px;height:260px;background:rgba(229,57,53,.06);animation-delay:1.5s"></div>
+
+        <!-- LAYER JAUH -->
+        <span class="sil" data-speed="0.04" data-rot="-16" style="top:2%;left:-2%;font-size:13rem">🍜</span>
+        <span class="sil" data-speed="0.03" data-rot="11"  style="top:20%;right:-3%;font-size:12rem">🥑</span>
+        <span class="sil" data-speed="0.05" data-rot="-20" style="top:48%;left:-2%;font-size:14rem">🍮</span>
+        <span class="sil" data-speed="0.04" data-rot="14"  style="top:68%;right:-2%;font-size:11rem">🥤</span>
+        <span class="sil" data-speed="0.03" data-rot="-8"  style="top:86%;left:2%;font-size:12rem">🍲</span>
+        <span class="sil" data-speed="0.05" data-rot="10"  style="top:93%;right:1%;font-size:10rem">🌶️</span>
+
+        <!-- LAYER TENGAH -->
+        <span class="sil" data-speed="0.13" data-rot="26"  style="top:15%;left:46%;font-size:8rem;opacity:.04">🌶️</span>
+        <span class="sil" data-speed="0.11" data-rot="-24" style="top:43%;left:38%;font-size:9rem;opacity:.04">🍜</span>
+        <span class="sil" data-speed="0.14" data-rot="20"  style="top:66%;left:56%;font-size:8rem;opacity:.04">🥑</span>
+        <span class="sil" data-speed="0.1"  data-rot="-18" style="top:82%;right:14%;font-size:7rem;opacity:.04">🍮</span>
+        <span class="sil" data-speed="0.12" data-rot="30"  style="top:30%;left:22%;font-size:8rem;opacity:.04">🍲</span>
+        <span class="sil" data-speed="0.15" data-rot="-14" style="top:58%;left:72%;font-size:7rem;opacity:.04">🥤</span>
+
+        <!-- LAYER DEKAT -->
+        <span class="sil" data-speed="0.23" data-rot="-32" style="top:28%;left:14%;font-size:5rem;opacity:.04">🥤</span>
+        <span class="sil" data-speed="0.21" data-rot="25"  style="top:60%;left:68%;font-size:5rem;opacity:.04">🍮</span>
+        <span class="sil" data-speed="0.25" data-rot="-22" style="top:80%;left:32%;font-size:5rem;opacity:.04">🌶️</span>
+        <span class="sil" data-speed="0.19" data-rot="28"  style="top:10%;left:24%;font-size:6rem;opacity:.04">🍲</span>
+        <span class="sil" data-speed="0.27" data-rot="-20" style="top:52%;left:82%;font-size:4rem;opacity:.04">🍜</span>
+        <span class="sil" data-speed="0.22" data-rot="32"  style="top:74%;left:8%;font-size:4rem;opacity:.04">🥑</span>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <span class="brand-icon">🍜</span>
+                <span class="brand-name">Anti Suki</span>
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="menu.html" class="nav-link">Menu</a></li>
+                <li>
+                    <a href="payment.html" class="nav-link nav-link-pay active">
+                        Pesan
+                        <span class="nav-badge" id="nav-badge"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <div class="page-hero animate-slide-up delay-1">
+        <div class="section-eyebrow">💳 Pembayaran</div>
+        <h1 class="page-hero-title gradient-text">Simulasi Pembayaran</h1>
+        <p class="page-hero-sub">Pilih menu favorit dan selesaikan pesananmu dengan mudah</p>
+    </div>
+
+    <!-- PAYMENT CONTENT -->
+    <main class="payment-main">
+        <div class="payment-wrapper">
+
+            <!-- CART -->
+            <div class="cart-box animate-on-scroll">
+                <div class="cart-head">
+                    <h3>🛒 Keranjang</h3>
+                    <span class="cart-badge" id="cart-badge">0</span>
+                </div>
+
+                <div id="cart-empty" class="cart-empty">
+                    <div class="empty-emoji">🛒</div>
+                    <p>Keranjang masih kosong</p>
+                    <a href="menu.html" class="btn btn-sm btn-outline">Pilih Menu</a>
+                </div>
+
+                <div id="cart-items" class="cart-items"></div>
+
+                <div class="cart-summary" id="cart-summary" style="display:none">
+                    <div class="sum-row"><span>Subtotal</span><span id="subtotal-val">Rp 0</span></div>
+                    <div class="sum-row"><span>Pajak (10%)</span><span id="tax-val">Rp 0</span></div>
+                    <div class="sum-total">
+                        <span>Total Bayar</span>
+                        <span id="total-val" class="gradient-text">Rp 0</span>
+                    </div>
+                </div>
+
+                <div class="cart-actions" id="cart-actions" style="display:none">
+                    <button class="btn btn-sm btn-ghost" id="clear-cart-btn">🗑 Kosongkan</button>
+                    <a href="menu.html" class="btn btn-sm btn-outline">+ Tambah Item</a>
+                </div>
+            </div>
+
+            <!-- CHECKOUT FORM -->
+            <div class="checkout-box animate-on-scroll">
+                <div class="checkout-head"><h3>📋 Detail Pesanan</h3></div>
+                <form class="checkout-form" id="checkout-form" novalidate>
+                    <div class="form-group">
+                        <label for="cust-name">Nama Pemesan <span class="req">*</span></label>
+                        <input type="text" id="cust-name" placeholder="Masukkan nama Anda" autocomplete="name">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="table-num">Nomor Meja</label>
+                            <input type="number" id="table-num" placeholder="Contoh: 5" min="1" max="50">
+                        </div>
+                        <div class="form-group">
+                            <label for="order-type">Tipe Pesanan</label>
+                            <select id="order-type">
+                                <option value="dine-in">Dine In</option>
+                                <option value="takeaway">Takeaway</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="notes">Catatan Tambahan</label>
+                        <textarea id="notes" placeholder="Contoh: tidak pakai es, tambah gula, dll." rows="3"></textarea>
+                    </div>
+
+                    <div class="payment-method-block">
+                        <p class="method-label">Metode Pembayaran</p>
+                        <div class="method-card selected">
+                            <div class="method-icon-wrap">🎁</div>
+                            <div class="method-info">
+                                <strong>Trakteer</strong>
+                                <span>Bayar digital via Trakteer</span>
+                            </div>
+                            <div class="method-check">✓</div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block" id="pay-btn">
+                        <span>Bayar via Trakteer</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </button>
+                    <p class="pay-note">* Anda akan diarahkan ke halaman Trakteer untuk menyelesaikan pembayaran</p>
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span class="footer-emoji">🍜</span>
+                <span class="gradient-text footer-name">Anti Suki</span>
+            </div>
+            <p class="footer-tagline">Tempat makan favorit semua kalangan</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="payment.html">Pesan</a>
+            </div>
+            <p class="footer-copy">&copy; 2025 Anti Suki. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="toast-container" id="toast-container" aria-live="polite"></div>
+    <script src="script.js"></script>
+</body>
+</html>

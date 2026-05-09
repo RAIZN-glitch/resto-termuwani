@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anti Suki - Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="page-menu">
+
+    <!-- BG SILHOUETTES — 3-layer depth parallax -->
+    <div class="bg-sils" aria-hidden="true">
+
+        <!-- Orbs warna -->
+        <div class="bg-blob" style="top:8%;left:5%;width:280px;height:280px;background:rgba(255,193,7,.09)"></div>
+        <div class="bg-blob" style="top:40%;right:4%;width:340px;height:340px;background:rgba(204,0,0,.08);animation-delay:4s"></div>
+        <div class="bg-blob" style="top:75%;left:35%;width:250px;height:250px;background:rgba(255,143,0,.07);animation-delay:2s"></div>
+
+        <!-- LAYER JAUH -->
+        <span class="sil" data-speed="0.04" data-rot="-14" style="top:2%;left:-3%;font-size:14rem">🍜</span>
+        <span class="sil" data-speed="0.03" data-rot="10"  style="top:18%;right:-3%;font-size:12rem">🥑</span>
+        <span class="sil" data-speed="0.05" data-rot="-22" style="top:48%;left:-2%;font-size:13rem">🍲</span>
+        <span class="sil" data-speed="0.04" data-rot="16"  style="top:65%;right:-2%;font-size:12rem">🥤</span>
+        <span class="sil" data-speed="0.03" data-rot="-9"  style="top:84%;left:1%;font-size:11rem">🍮</span>
+        <span class="sil" data-speed="0.05" data-rot="12"  style="top:90%;right:2%;font-size:10rem">🌶️</span>
+
+        <!-- LAYER TENGAH -->
+        <span class="sil" data-speed="0.12" data-rot="28"  style="top:12%;left:44%;font-size:8rem;opacity:.04">🌶️</span>
+        <span class="sil" data-speed="0.14" data-rot="-20" style="top:40%;left:36%;font-size:9rem;opacity:.04">🍜</span>
+        <span class="sil" data-speed="0.11" data-rot="24"  style="top:68%;left:54%;font-size:8rem;opacity:.04">🥑</span>
+        <span class="sil" data-speed="0.13" data-rot="-30" style="top:86%;right:10%;font-size:8rem;opacity:.04">🍮</span>
+        <span class="sil" data-speed="0.1"  data-rot="18"  style="top:28%;left:18%;font-size:7rem;opacity:.04">🍲</span>
+        <span class="sil" data-speed="0.15" data-rot="-16" style="top:55%;left:68%;font-size:8rem;opacity:.04">🥤</span>
+
+        <!-- LAYER DEKAT -->
+        <span class="sil" data-speed="0.24" data-rot="-28" style="top:25%;left:22%;font-size:5rem;opacity:.04">🥤</span>
+        <span class="sil" data-speed="0.22" data-rot="22"  style="top:56%;left:64%;font-size:5rem;opacity:.04">🍲</span>
+        <span class="sil" data-speed="0.26" data-rot="-18" style="top:78%;left:28%;font-size:5rem;opacity:.04">🌶️</span>
+        <span class="sil" data-speed="0.2"  data-rot="30"  style="top:10%;left:32%;font-size:6rem;opacity:.04">🍮</span>
+        <span class="sil" data-speed="0.28" data-rot="-24" style="top:44%;left:80%;font-size:4rem;opacity:.04">🍜</span>
+        <span class="sil" data-speed="0.21" data-rot="26"  style="top:72%;left:10%;font-size:4rem;opacity:.04">🥑</span>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <span class="brand-icon">🍜</span>
+                <span class="brand-name">Anti Suki</span>
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="menu.html" class="nav-link active">Menu</a></li>
+                <li>
+                    <a href="payment.html" class="nav-link nav-link-pay">
+                        Pesan
+                        <span class="nav-badge" id="nav-badge"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <div class="page-hero animate-slide-up delay-1">
+        <div class="section-eyebrow">🍽️ Sajian Spesial</div>
+        <h1 class="page-hero-title gradient-text">Menu Pilihan</h1>
+        <p class="page-hero-sub">Nikmati berbagai pilihan menu segar dan lezat dari dapur Anti Suki</p>
+    </div>
+
+    <!-- MENU GRID -->
+    <main class="menu-main">
+        <div class="menu-grid" id="menu-grid"></div>
+    </main>
+
+    <!-- FLOAT CART BUTTON -->
+    <a href="payment.html" class="float-cart" id="float-cart" style="display:none">
+        <span>🛒</span>
+        <span>Lihat Pesanan</span>
+        <span class="float-badge" id="float-badge">0</span>
+    </a>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span class="footer-emoji">🍜</span>
+                <span class="gradient-text footer-name">Anti Suki</span>
+            </div>
+            <p class="footer-tagline">Tempat makan favorit semua kalangan</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="payment.html">Pesan</a>
+            </div>
+            <p class="footer-copy">&copy; 2025 Anti Suki. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="toast-container" id="toast-container" aria-live="polite"></div>
+    <script src="script.js"></script>
+</body>
+</html>
